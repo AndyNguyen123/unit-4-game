@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dota RPG</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <section class="container-fluid">
+    <header class="row dflex justify-content-center">
+      <div text-white-50>
+        Dota RPG Game
+      </div>
+    </header>
+
+    <div id="heroes-selection" class="row dflex justify-content-left">
+      <figure id="luna" class="heroes-pic border text-danger m-3">
+        <img class="animated-gif" src="./assets/images/luna.gif">
+      </figure>
+
+      <figure id="qop" class="heroes-pic border text-danger m-3">
+        <img class="animated-gif" src="./assets/images/qop.gif">
+      </figure>
+
+    </div>
+
+    <button id="attackButton" class="btn btn-outline-danger">Attack</button>
+
+    <div class="row">
+
+      <figure id="player" class="heroes-pic border text-danger m-3">
+        <img class="animated-gif">
+        <div id="player-status" class="dflex justify-content-center">
+          <div id="player-damage"></div>
+          <div id="player-hp"></div>
+        </div>
+      </figure>
+
+      <figure id="enemy" class="heroes-pic border text-danger m-3">
+        <img class="animated-gif">
+        <div id="enemy-status" class="dflex justify-content-center">
+          <div id="enemy-counter-damage"></div>
+          <div id="enemy-hp"></div>
+        </div>
+      </figure>
+
+    </div>
+    </div>
+
+  </section>
+
+  <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>

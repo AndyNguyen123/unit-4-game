@@ -1,0 +1,14 @@
+.heroes-pic {
+  width: 150px;
+  text-align: center
+}
+
+.player {
+  width: 150px;
+  text-align: center
+}
+
+img.animated-gif {
+  width: 150px;
+  height: auto;
+}
