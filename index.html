@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 
 <body>
@@ -22,12 +23,12 @@
     </header>
 
     <div id="heroes-selection" class="row dflex justify-content-left">
-      <figure id="luna" class="heroes-pic border text-danger m-3">
-        <img class="animated-gif" src="./assets/images/luna.gif">
+      <figure id="luna" class="heroes-pic border text-danger m-3" value="heroes.luna">
+        <img class="animated-gif">
       </figure>
 
-      <figure id="qop" class="heroes-pic border text-danger m-3">
-        <img class="animated-gif" src="./assets/images/qop.gif">
+      <figure id="qop" class="heroes-pic border text-danger m-3" value="heroes.qop">
+        <img class="animated-gif">
       </figure>
 
     </div>
@@ -51,13 +52,15 @@
           <div id="enemy-hp"></div>
         </div>
       </figure>
+      
 
     </div>
     </div>
 
   </section>
 
-  <script src="./assets/javascript/game.js"></script>
+  <script data-plugins="transform-es2015-modules-umd" src="./assets/javascript/heroes.js" type="text/babel"></script>
+  <script data-plugins="transform-es2015-modules-umd" src="./assets/javascript/game.js" type="text/babel"></script>
 </body>
 
 </html>

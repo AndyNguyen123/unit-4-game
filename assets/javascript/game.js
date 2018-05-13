@@ -1,24 +1,24 @@
-//set up game object
+//import heroes
+'use strict';
+import heroes from './heroes.js';
+console.log(heroes);
 
-const luna = {
-  damage: 10,
-  counterDamage: 4,
-  hp: 100,
-}
 
-const qop = {
-  damage: 7,
-  counterDamage: 5,
-  hp: 100,
-}
 let player;
 let enemy;
-
 $("#player").hide();
 $("#enemy").hide();
-$("#luna").on("click", () => {
-  player = luna;
-  enemy = qop;
+
+//assign heroes pictures
+$("#luna img").attr('src', heroes.luna.iconUrl);
+$("#qop img").attr('src', heroes.qop.iconUrl);
+
+let figure = $(".heroes-pic");
+figure.on("click", () => {
+  console.log(figure);
+  player = figure.attr("value");
+  console.log(figure.attr("value"));
+  //enemy = heroes.qop;
   //showing player
   $("#player img").attr('src', './assets/images/luna.gif');
   $("#player-damage").text('Damage: ' + player.damage);
