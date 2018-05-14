@@ -12,3 +12,7 @@ img.animated-gif {
   width: 150px;
   height: auto;
 }
+
+body {
+  background: url('../images/background.png')
+}
