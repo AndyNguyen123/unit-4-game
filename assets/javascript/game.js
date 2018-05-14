@@ -10,7 +10,7 @@ $("#enemy").hide();
 
 //create a function to show the html block for the hero
 const generateHeroFigure = function (hero) {
-  const heroFigure = $(`<figure id=${hero.name} class='heroes-pic border text-danger m-3'> <img class='animated-gif' src=${hero.iconUrl}> </figure>'`)
+  const heroFigure = $(`<figure id=${hero.name} class='heroes-pic text-danger m-3'> <img class='animated-gif' src=${hero.iconUrl}> </figure>'`)
   return heroFigure;
 }
 
