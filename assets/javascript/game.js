@@ -25,7 +25,8 @@ for (let hero in heroes) {
 let isHeroChosen = false;
 let isEnemyChosen = false;
 let isEnemyDead = false;
-let isEnemyLeft = true;
+let enemyLeft = 3;
+let isGameOver = false;
 
 $(".heroes-pic").on("click", function() {
   //player choose their hero
@@ -45,18 +46,21 @@ $(".heroes-pic").on("click", function() {
   else if(isEnemyChosen === false) {
     enemy = heroes[$(this).attr("id")];
     isEnemyDead = false;
+    enemyLeft--;
     //showing enemy
     $("#enemy img").attr('src', enemy.iconUrl);
     $("#enemy-counter-damage").text('Counter Damage: ' + enemy.counterDamage);
     $("#enemy-hp").text('HP: ' + enemy.hp);
-    
-    
     $("#enemy").show();
     $(this).hide();
     isEnemyChosen = true;
     $("#display-message").find("h2").text('You Can Now Fight Your Opponent');
   }
 
+  //disable hero selection when game is over
+  if(isGameOver === true) {
+    $(".heroes-pic").off("click");
+  }
 })
 
 
@@ -74,11 +78,31 @@ $("#attackButton").on("click", function () {
     $("#enemy-hp").text('HP: ' + enemy.hp);
   }
   
+  //when enemy is dead
   if(enemy.hp < 1) {
     isEnemyDead = true;
     $("#enemy").hide();
     isEnemyChosen = false;
     $("#display-message").find("h2").text('Please Choose Your Opponent');
   }
-})
 
+  //game is won when no enemy left
+  if(enemyLeft < 1 && player.hp < 1) {
+    $("#display-message").find("h2").text('LOL! Nice One, You Both Die!');
+  }
+
+  else if (enemyLeft < 1) {
+    console.log('enemy left ' + enemyLeft);
+    $("#display-message").find("h2").text(player.name + ', You Are The Last One Standing!');
+    isGameOver = true;
+    return;
+  }
+
+  //game is lost when player has no hp left
+  else if (player.hp <1) {
+    isGameOver = true;
+    isEnemyChosen = true;
+    $("#attackButton").off("click");
+    $("#display-message").find("h2").text(player.name + ', You Are Defeated!');
+  }
+})

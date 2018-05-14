@@ -1,33 +1,33 @@
 const heroes = {
-  luna: {
-    name: 'luna',
+  Luna: {
+    name: 'Luna',
     damage: 10,
-    counterDamage: 4,
+    counterDamage: 15,
     hp: 150,
     iconUrl: './assets/images/luna.gif',
 
   },
 
-  qop: {
-    name: 'qop',
+  QueenOfPain: {
+    name: 'QueenOfPain',
     damage: 7,
-    counterDamage: 5,
+    counterDamage: 20,
     hp: 170,
     iconUrl: './assets/images/qop.gif',
   },
 
-  rubick: {
-    name: 'rubick',
+  Rubick: {
+    name: 'Rubick',
     damage: 5,
-    counterDamage: 2,
+    counterDamage: 10,
     hp: 300,
     iconUrl: './assets/images/rubick.gif',
   },
 
-  nevermore: {
-    name: 'nevermore',
+  Nevermore: {
+    name: 'Nevermore',
     damage: 15,
-    counterDamage: 7,
+    counterDamage: 35,
     hp: 100,
     iconUrl: './assets/images/nevermore.gif',
   },
